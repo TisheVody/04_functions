@@ -6,7 +6,7 @@ fun main() {
     if (seconds > 60 * 60) println("был(а) в сети $test") else println("был(а) $test")
 }
 
-val seconds = 39623
+val seconds = 823
 val minute = (seconds / 60)
 val hour = (minute / 60)
 val minuteWord = minuteFun(minute)
@@ -23,7 +23,7 @@ fun agoToText(seconds: Int) = when (seconds) {
 }
 
 fun minuteFun(minute: Int): String {
-    if (minute == 11) return "минут"
+    if (minute in 11..14) return "минут"
     return when (minute % 10) {
         1 -> "минуту"
         2, 3, 4 -> "минуты"
@@ -33,7 +33,7 @@ fun minuteFun(minute: Int): String {
 }
 
 fun hourFun(hour: Int): String {
-    if (hour == 11) return "часов"
+    if (hour in 11..14) return "часов"
     return when (hour % 10) {
         1 -> "час"
         2, 3, 4 -> "часа"
