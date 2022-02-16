@@ -129,7 +129,7 @@ class Different_commissionKtTest {
     @Test
     fun comissionMaestroMastercard_branchIf() {
         //arrange
-        val currentTransfer = 91_000_00
+        val currentTransfer = 90_000_00
 
         //act
         val result = comissionMaestroMastercard(currentTransfer = currentTransfer)
